@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\CPU">
+      <UniqueIdentifier>{fb738f4d-8263-472f-93bf-d3a9ba87fe92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\CPU">
+      <UniqueIdentifier>{94967004-c26c-4d1b-8cac-e4f1d9dd5aac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GPU">
+      <UniqueIdentifier>{4fc03c9e-a4cc-43aa-8555-a2031cebc86a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{ff139692-773c-4725-8b72-b967fb9913e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GPU">
+      <UniqueIdentifier>{715f063f-75c1-4ea5-b3a6-aad52075f29e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Input">
+      <UniqueIdentifier>{b7ba7893-eea6-47e2-9265-238bb2cd44d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Input">
+      <UniqueIdentifier>{5666d3d7-539c-4569-b20a-b2989611c518}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Memory">
+      <UniqueIdentifier>{52a15b56-f108-4f43-855b-9bcaad6f086e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Memory">
+      <UniqueIdentifier>{d632c7fc-881b-4f7a-a68f-4fe419fdad70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Storage">
+      <UniqueIdentifier>{ac55196c-7033-4ac8-9d03-7b17201ac642}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Storage">
+      <UniqueIdentifier>{55a23726-ea77-4dc1-825b-7c3e2b913158}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Port">
+      <UniqueIdentifier>{a539d12d-efc9-4abf-b1d2-25429ccf438e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Port">
+      <UniqueIdentifier>{aae4dff6-812b-461d-be77-1c8340862e66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\String">
+      <UniqueIdentifier>{2fd8c203-343e-461e-8d43-4b960a4d7054}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\String">
+      <UniqueIdentifier>{261a7599-dd32-4500-b125-b40c900f6eb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Boot">
+      <UniqueIdentifier>{14e73096-fe67-4fc9-9a04-cf62567eb201}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Boot">
+      <UniqueIdentifier>{37e57c9d-93c8-428a-bae4-ab756a47c625}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Thread">
+      <UniqueIdentifier>{1f5ca767-cf8f-4aff-8fa1-1b4117a642b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Thread">
+      <UniqueIdentifier>{4d7fa6a7-51f2-4a62-9aaf-5f541cc7884f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Header">
+      <UniqueIdentifier>{0056db16-c3f0-4544-ae48-45348cdc9e40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Header">
+      <UniqueIdentifier>{0a9907b9-575c-463e-b4e6-3cf1e74e7e3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UI">
+      <UniqueIdentifier>{19325f8c-e3ed-4bf5-a883-4ae7c980eb0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UI\Windows">
+      <UniqueIdentifier>{bc514c83-03bb-4222-88e5-01288fd42e70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI">
+      <UniqueIdentifier>{cd5a6ea5-e871-4b26-993e-19f240e6ccbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI\Windows">
+      <UniqueIdentifier>{0b10a484-457d-442e-8fa9-12271040db49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Timer">
+      <UniqueIdentifier>{96a8f594-731f-458a-920a-7459934f411a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Timer">
+      <UniqueIdentifier>{babfda29-54e9-4e1c-a552-a508f4c70614}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data Structure and Algorithms">
+      <UniqueIdentifier>{130db727-832a-4f2b-a3b2-c7b64ca8033a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Data Structure and Algorithms">
+      <UniqueIdentifier>{2246ad42-bdbe-412f-82d7-e19c61a725bb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gpuCore.cpp">
+      <Filter>Source Files\GPU</Filter>
+    </ClCompile>
+    <ClCompile Include="fileManager.cpp">
+      <Filter>Source Files\Storage</Filter>
+    </ClCompile>
+    <ClCompile Include="portManager.cpp">
+      <Filter>Source Files\Port</Filter>
+    </ClCompile>
+    <ClCompile Include="stringManager.cpp">
+      <Filter>Source Files\String</Filter>
+    </ClCompile>
+    <ClCompile Include="threadManager.cpp">
+      <Filter>Source Files\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="despairThreads.cpp">
+      <Filter>Source Files\Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="bootManager.cpp">
+      <Filter>Source Files\Boot</Filter>
+    </ClCompile>
+    <ClCompile Include="memoryManager.cpp">
+      <Filter>Source Files\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="despairHeader.cpp">
+      <Filter>Source Files\Header</Filter>
+    </ClCompile>
+    <ClCompile Include="sha256.cpp">
+      <Filter>Source Files\Data Structure and Algorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="despairVM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="memoryDMAController.cpp">
+      <Filter>Source Files\Memory</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowsMain.cpp">
+      <Filter>Source Files\UI\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="uiDirectX.cpp">
+      <Filter>Source Files\UI\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="timer.cpp">
+      <Filter>Source Files\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="keyboardManager.cpp">
+      <Filter>Source Files\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="x86DynaRecCore.cpp">
+      <Filter>Source Files\CPU</Filter>
+    </ClCompile>
+    <ClCompile Include="x86_64Emitter.cpp">
+      <Filter>Source Files\CPU</Filter>
+    </ClCompile>
+    <ClCompile Include="x86BinBlock.cpp">
+      <Filter>Source Files\Data Structure and Algorithms</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="declarations.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gpuCore.h">
+      <Filter>Header Files\GPU</Filter>
+    </ClInclude>
+    <ClInclude Include="fileManager.h">
+      <Filter>Header Files\Storage</Filter>
+    </ClInclude>
+    <ClInclude Include="portManager.h">
+      <Filter>Header Files\Port</Filter>
+    </ClInclude>
+    <ClInclude Include="portAddress.h">
+      <Filter>Header Files\Port</Filter>
+    </ClInclude>
+    <ClInclude Include="stringManager.h">
+      <Filter>Header Files\String</Filter>
+    </ClInclude>
+    <ClInclude Include="threadManager.h">
+      <Filter>Header Files\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="despairThreads.h">
+      <Filter>Header Files\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="build.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bootManager.h">
+      <Filter>Header Files\Boot</Filter>
+    </ClInclude>
+    <ClInclude Include="memoryManager.h">
+      <Filter>Header Files\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="despairHeader.h">
+      <Filter>Header Files\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="sha256.h">
+      <Filter>Header Files\Data Structure and Algorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="despairVM.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="instructionsSet.h">
+      <Filter>Header Files\CPU</Filter>
+    </ClInclude>
+    <ClInclude Include="memoryDMAController.h">
+      <Filter>Header Files\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="threadParameter.h">
+      <Filter>Header Files\Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="uiDirectx.h">
+      <Filter>Header Files\UI\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="timer.h">
+      <Filter>Header Files\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="keyboardManager.h">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="x86DynaRecCore.h">
+      <Filter>Header Files\CPU</Filter>
+    </ClInclude>
+    <ClInclude Include="x86_64Emitter.h">
+      <Filter>Header Files\CPU</Filter>
+    </ClInclude>
+    <ClInclude Include="x86BinBlock.h">
+      <Filter>Header Files\Data Structure and Algorithms</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
