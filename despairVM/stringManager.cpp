@@ -199,7 +199,6 @@ string floatToString(float32 f, uint32 precision) {
 }
 
 uint64 getCharArray(uint64 ptr) {
-	string *str = (string*)ptr;
 	return (uint64)((string*)ptr)->c_str();
 }
 
