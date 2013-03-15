@@ -10,7 +10,7 @@
 #ifndef BUILD_H
 #define BUILD_H
 
-//#define DEBUG_DESPAIR		//Define when building a debug version
+#define DEBUG_DESPAIR		//Define when building a debug version
 
 //Define ONLY one of the below
 #define BUILD_FOR_WINDOWS	//Define ONLY when building for Windows OS
