@@ -31,7 +31,11 @@ using namespace std;
 #define FD_CYCLE_BREAK_JCR			0x83
 #define FD_CYCLE_BREAK_CALL			0x84
 #define FD_CYCLE_BREAK_RET			0x85
-#define FD_CYCLE_END				0x86
+#define FD_CYCLE_JMP_R				0x86
+#define FD_CYCLE_JMPR_R				0x87
+#define FD_CYCLE_JC_R_R				0x88
+#define FD_CYCLE_JCR_R_R			0x89
+#define FD_CYCLE_END				0x8A
 
 DespairTimer X86DynaRecCore::timer;
 
@@ -84,6 +88,18 @@ void X86DynaRecCore::startCPULoop() {
 						break;
 					case FD_CYCLE_BREAK_RET:
 						RET();
+						break;
+					case FD_CYCLE_JMP_R:
+						JMP_R();
+						break;
+					case FD_CYCLE_JMPR_R:
+						JMPR_R();
+						break;
+					case FD_CYCLE_JC_R_R:
+						JC_R_R();
+						break;
+					case FD_CYCLE_JCR_R_R:
+						JCR_R_R();
 						break;
 					case FD_CYCLE_END:
 						return;
@@ -761,6 +777,19 @@ int X86DynaRecCore::fdCycle(X86BinBlock *binBlock) {
 			break;
 		case _RAND:
 			RAND(binBlock);
+			break;
+		case _JMP_R:
+			pC -= 2;
+			return FD_CYCLE_JMP_R;
+		case _JMPR_R:
+			pC -= 2;
+			return FD_CYCLE_JMPR_R;
+		case _JC_R_R:
+			pC -= 2;
+			return FD_CYCLE_JC_R_R;
+		case _JCR_R_R:
+			pC -= 2;
+			return FD_CYCLE_JCR_R_R;
 	}
 
 	if (!binBlock) {
@@ -2648,6 +2677,7 @@ void X86DynaRecCore::RAND(X86BinBlock *binBlock) {
 	movMOffsetRAX(binBlock, regAddr0);
 }
 
+
 void X86DynaRecCore::JMP_IMMI() {
 	pC += 2;
 	pC = *(uint32*)&memManager.codeSpace[pC];
@@ -2688,5 +2718,33 @@ void X86DynaRecCore::RET() {
 		pC = -1;
 	} else {
 		pC = *(uint32*)&memManager.stackSpace[sP];
+	}
+}
+
+void X86DynaRecCore::JMP_R() {
+	pC += 2;
+	pC = regs[memManager.codeSpace[pC]];
+}
+
+void X86DynaRecCore::JMPR_R() {
+	pC += 2;
+	pC += regs[memManager.codeSpace[pC]] + 1;
+}
+
+void X86DynaRecCore::JC_R_R() {
+	pC += 2;
+	if (regs[memManager.codeSpace[pC]] == 0) {
+		pC = regs[memManager.codeSpace[pC + 1]];
+	} else {
+		pC += 2;
+	}
+}
+
+void X86DynaRecCore::JCR_R_R() {
+	pC += 2;
+	if (regs[memManager.codeSpace[pC]] == 0) {
+		pC += regs[memManager.codeSpace[pC + 1]] + 2;
+	} else {
+		pC += 2;
 	}
 }

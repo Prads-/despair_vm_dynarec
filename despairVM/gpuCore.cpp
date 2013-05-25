@@ -76,7 +76,7 @@ void GPUCore::drawMonochorme(int x, int y, uint32 *imgPtr) {
 	int imageHeight = imgPtr[HEIGHT_INDEX], imageWidth = imgPtr[WIDTH_INDEX];
 	char *image = (char*)&imgPtr[IMAGE_DATA];
 
-	if (x < 0 || x + imageWidth > frameHeight || y < 0 || y + imageHeight > frameHeight) {
+	if (x < 0 || x + imageWidth > frameWidth || y < 0 || y + imageHeight > frameHeight) {
 		return;
 	}
 	
@@ -264,12 +264,11 @@ void GPUCore::presentBuffer() {
 }
 
 void GPUCore::gpuDecodeCommand(uint32 cmd) {
-	if (cmd & 0xFF000000) {
-		if ((cmd & 0xFFFFFF) == 0) {
-			presentBuffer();
-		} else if ((cmd & 0xFF000000) == 0x1000000) {
-			monochormeColor = cmd & 0xFFFFFF;
-		}
+	int msB = (cmd & 0xFF000000) >> 24;
+	if (msB == 0x7F) {
+		presentBuffer();
+	} else if (msB == 1) {
+		monochormeColor = cmd & 0xFFFFFF;
 	} else {
 		clearFrameBuffer(cmd);
 	}

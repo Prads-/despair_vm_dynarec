@@ -112,7 +112,7 @@ void UIDirectX::renderFrame(const uint32 *frameBuffer) {
 	texScreen->LockRect(0, &lockedRect, 0, D3DLOCK_DISCARD);
 	for (int y = 0; y < fHeight; ++y) {
 		for (int x = 0; x < fWidth; ++x) {
-			*(unsigned int*)((char*)lockedRect.pBits + x * (lockedRect.Pitch / fWidth) + y * lockedRect.Pitch) = frameBuffer[x + y * fHeight];
+			*(unsigned int*)((char*)lockedRect.pBits + x * 4 + y * lockedRect.Pitch) = frameBuffer[x + y * fWidth];
 		}
 	}
 	texScreen->UnlockRect(0);

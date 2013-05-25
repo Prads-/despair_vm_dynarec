@@ -9,11 +9,11 @@
     <ShowAllFiles>false</ShowAllFiles>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <LocalDebuggerCommandArguments>"E:/Pradipna/project/Break Out/build.dbin"</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>"E:/Pradipna/project/IDE Test/Test1/build.dbin"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LocalDebuggerCommandArguments>"E:/Pradipna/project/Break Out/build.dbin"</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>"E:/Pradipna/project/despairIDE_Windows/Projects/proto battle/build.dbin"</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
 </Project>

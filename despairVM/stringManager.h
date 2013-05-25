@@ -29,6 +29,7 @@
 #define STRING_MANAGER_GET_CHAR_ARRAY			10
 #define STRING_MANAGER_COMPARE					11
 #define STRING_MANAGER_COPY_STR					12
+#define STRING_MANAGER_SUBSTRING				13
 
 namespace StringManager {
 	void decodeStringCommands(uint8 cmd, uint8 *ports);

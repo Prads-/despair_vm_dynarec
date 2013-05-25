@@ -211,4 +211,9 @@
 
 #define _RAND							0x00a3
 
+#define _JMP_R							0x00a4
+#define _JMPR_R							0x00a5
+#define _JC_R_R							0x00a6
+#define _JCR_R_R						0x00a7
+
 #endif

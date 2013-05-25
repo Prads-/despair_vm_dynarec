@@ -40,8 +40,8 @@ X86BinBlock::~X86BinBlock() {
 #endif
 }
 
-void X86BinBlock::checkBinBufferBoundary(int size) {
-	if (counter + size >= size) {
+void X86BinBlock::checkBinBufferBoundary(int typeSize) {
+	if (counter + typeSize >= size) {
 		size += 10240; //Another 10 KB
 
 #ifdef BUILD_FOR_UNIX

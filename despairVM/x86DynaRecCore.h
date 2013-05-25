@@ -253,6 +253,10 @@ private:
 	void JCR_R_IMMI();
 	void CALL_IMMI();
 	void RET();
+	void JMP_R();
+	void JMPR_R();
+	void JC_R_R();
+	void JCR_R_R();
 
 public:
 	X86DynaRecCore(uint8 *codePtr, uint8 *globalDataPtr, uint32 codeStartIndex, uint64 paramAddr, GPUCore *gpuCore, DespairHeader::ExecutableHeader *header, KeyboardManager *keyboardManager);
